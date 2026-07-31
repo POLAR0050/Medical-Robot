@@ -1,0 +1,30 @@
+
+
+void EEPROM_Write(u16 address, u8 data)
+{
+	 while (EECR & (1 << EEWE));
+	 
+	SET_Bit (EECR,EEMWE);
+	EEARH = (u8)(address >> 8);
+	EEARL = (u8)address;
+	EEDR =  data;
+	SET_Bit (EECR,EEMWE);
+	SET_Bit (EECR,EEWE);
+	
+}
+
+u8 EEPROM_Read(u16 address);
+{
+	 while (EECR & (1 << EEWE));
+	 
+EEARH = (u8)(address >> 8);
+EEARL = (u8)address;
+
+    SET_BIT(EECR, EERE); // nebda2 EEPROM Read
+
+ 
+    return EEDR;
+	
+}
+
+
