@@ -1,0 +1,88 @@
+#include "MOTOR.h"
+#include "DIO.h"
+
+#define M1_IN1 PIN0
+#define M1_IN2 PIN1
+
+#define M2_IN1 PIN2
+#define M2_IN2 PIN3
+
+#define M3_IN1 PIN4
+#define M3_IN2 PIN5
+
+#define M4_IN1 PIN6
+#define M4_IN2 PIN7
+
+#define MOTOR_PORT PORTB_ID
+
+void MOTOR_Init(void)
+{
+	DIO_SetPortDirection(MOTOR_PORT,PORT_OUTPUT);
+
+	MOTOR_Stop();
+}
+
+void MOTOR_Stop(void)
+{
+	DIO_SetPortValue(MOTOR_PORT,0x00);
+}
+
+void MOTOR_Forward(void)
+{
+	DIO_SetPinValue(MOTOR_PORT,M1_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M1_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M2_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M2_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M3_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M3_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M4_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M4_IN2,PIN_LOW);
+}
+
+void MOTOR_Backward(void)
+{
+	DIO_SetPinValue(MOTOR_PORT,M1_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M1_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M2_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M2_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M3_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M3_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M4_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M4_IN2,PIN_HIGH);
+}
+
+void MOTOR_Left(void)
+{
+	DIO_SetPinValue(MOTOR_PORT,M1_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M1_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M2_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M2_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M3_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M3_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M4_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M4_IN2,PIN_LOW);
+}
+
+void MOTOR_Right(void)
+{
+	DIO_SetPinValue(MOTOR_PORT,M1_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M1_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M2_IN1,PIN_HIGH);
+	DIO_SetPinValue(MOTOR_PORT,M2_IN2,PIN_LOW);
+
+	DIO_SetPinValue(MOTOR_PORT,M3_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M3_IN2,PIN_HIGH);
+
+	DIO_SetPinValue(MOTOR_PORT,M4_IN1,PIN_LOW);
+	DIO_SetPinValue(MOTOR_PORT,M4_IN2,PIN_HIGH);
+}
