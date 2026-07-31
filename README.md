@@ -118,23 +118,8 @@ Smart-Medical-Delivery-Robot/
 
 ---
 
-# 📸 Project Images
 
-Add screenshots here.
 
-```
-Images/
-├── Robot.jpg
-├── Circuit.png
-├── LCD.png
-├── Proteus.png
-```
-
----
-
-# 🎥 Demo Video
-
-Add your demonstration video inside the **Videos** folder or attach a YouTube link.
 
 ---
 
@@ -142,9 +127,9 @@ Add your demonstration video inside the **Videos** folder or attach a YouTube li
 
 - Microchip Studio
 - AVR-GCC
-- Proteus 8
+- Proteus 8.13
 - Embedded C
-- Git & GitHub
+- GitHub
 
 ---
 
@@ -162,6 +147,10 @@ Add your demonstration video inside the **Videos** folder or attach a YouTube li
 # 👨‍💻 Author
 
 **Mohammed Ghaleb**
+**ibrahim khald **
+**abanoub alamir**
+**ahmed dosoky**
+abdallah elhelw**
 
 Embedded Systems Engineer
 
