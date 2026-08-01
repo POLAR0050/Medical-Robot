@@ -1,3 +1,5 @@
+
+/*
 #include "BLUETOOTH.h"
 
 #include "UART.h"
@@ -16,3 +18,4 @@ u8 BT_Read(void)
 {
 	return UART_ReceiveChar();
 }
+*/

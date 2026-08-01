@@ -1,3 +1,4 @@
+/*
 #ifndef RTC_H_
 #define RTC_H_
 
@@ -9,4 +10,4 @@ void RTC_SetTime(u8 Hour,u8 Minute,u8 Second);
 
 void RTC_ReadTime(u8 *Hour,u8 *Minute,u8 *Second);
 
-#endif
+#endif*/

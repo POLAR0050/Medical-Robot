@@ -1,3 +1,5 @@
+
+/*
 #include "RTC.h"
 #include "TWI.h"
 
@@ -55,4 +57,4 @@ void RTC_ReadTime(u8 *Hour,u8 *Minute,u8 *Second)
 	*Hour = BCD_TO_DEC(TWI_Read_NACK());
 
 	TWI_Stop();
-}
+}*/

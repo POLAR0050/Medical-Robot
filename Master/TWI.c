@@ -3,7 +3,7 @@
  *
  * Created: 7/31/2026 11:31:21 AM
  *  Author: User
- */ 
+ 
 #include "TWI.h"
 
 void TWI_Init(void)
@@ -72,4 +72,4 @@ u8 TWI_Read_NACK(void)
 	while(GET_BIT(TWCR,TWINT)==0);
 
 	return TWDR;
-}
+}*/
