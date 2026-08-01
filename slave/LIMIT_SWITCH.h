@@ -1,0 +1,19 @@
+#ifndef LIMIT_SWITCH_H_
+#define LIMIT_SWITCH_H_
+
+#include "STD_TYPES.h"
+
+/*
+ * ==========================================================
+ *  LIMIT SWITCH PIN MAPPING
+ * ==========================================================
+ *  Signal : PC3 (Pull-up ????? ????? - ??????? ????? ?? GND)
+ * ==========================================================
+ */
+
+void LIMIT_SWITCH_Init(void);
+
+/* ????? 1 ?? ??????? ?????? 0 ?? ?? */
+u8 LIMIT_SWITCH_IsPressed(void);
+
+#endif
