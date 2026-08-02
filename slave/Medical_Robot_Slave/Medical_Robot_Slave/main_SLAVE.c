@@ -1,0 +1,22 @@
+#define F_CPU 8000000UL
+
+#include "UART.h"
+#include "LED.h"
+
+int main(void)
+{
+	u8 b;
+
+	UART_Init();
+	LED_Init();
+
+	while(1)
+	{
+		b = UART_ReceiveChar();
+
+		if(b == 'S')
+		{
+			LED_Toggle();   /* ?? ?????? 'S' ?? ??????? -> ?????? ????? */
+		}
+	}
+}
