@@ -1,0 +1,16 @@
+#ifndef UART_H_
+#define UART_H_
+
+#include "STD_TYPES.h"
+
+void UART_Init(void);
+
+void UART_SendChar(u8 data);
+
+void UART_SendString(u8 *str);
+
+u8 UART_ReceiveChar(void);
+
+u8 UART_DataAvailable(void);
+
+#endif
